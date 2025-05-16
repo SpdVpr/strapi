@@ -4,8 +4,8 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-    "prebuild": "node strapi-cloud-fix.js && npm install autoprefixer postcss tailwindcss --no-save",
-    "build": "strapi build",
+    "prebuild": "node strapi-cloud-fix.js && npm install lodash@4.17.21 autoprefixer postcss tailwindcss --no-save",
+    "build": "node -r ./module-resolver.js node_modules/.bin/strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
     "dev": "strapi develop",
@@ -22,6 +22,7 @@
     "@strapi/strapi": "5.12.7",
     "better-sqlite3": "11.3.0",
     "fs-extra": "^10.0.0",
+    "lodash": "^4.17.21",
     "mime-types": "^2.1.27",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
