@@ -4,7 +4,7 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-    "prebuild": "npm install autoprefixer postcss tailwindcss --no-save",
+    "prebuild": "node strapi-cloud-fix.js && npm install autoprefixer postcss tailwindcss --no-save",
     "build": "strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
